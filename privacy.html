@@ -12,35 +12,48 @@
   a { color: #0066cc; }
   .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
   hr { border: 0; border-top: 1px solid #e5e5e7; margin: 2rem 0; }
+  code { background: #f5f5f7; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.92em; }
 </style>
 </head>
 <body>
 
 <h1>CanDash Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> [PUBLISH_DATE]</p>
+<p class="meta"><strong>Last updated:</strong> 27 May 2026</p>
 
 <p>CanDash (&ldquo;the app&rdquo;) is developed and published by SwiftCarTech (&ldquo;we&rdquo;, &ldquo;us&rdquo;). This policy explains what data the app handles and how. We have written it to be as plain and short as possible.</p>
 
 <h2>Summary</h2>
-<p>CanDash does not collect, transmit, or share any personal data. Everything the app stores stays on your device. We do not run analytics, advertising, or tracking of any kind.</p>
+<p>CanDash does not collect, transmit, or share any personal data. Everything the app stores stays on your device. We do not run analytics, advertising, or tracking of any kind. We do not have user accounts and we never ask for an email address.</p>
 
 <h2>What the app does on your device</h2>
 <p>CanDash connects to an OBD-II adapter in your vehicle to read live diagnostic data (engine RPM, speed, coolant temperature, fault codes, and similar). To do this, it needs access to one or more of the following on your device:</p>
 <ul>
-  <li><strong>Bluetooth</strong> &mdash; to talk to wireless OBD-II adapters (Veepeak, OBDLink CX, OBDLink MX+).</li>
+  <li><strong>Bluetooth</strong> &mdash; to talk to wireless OBD-II adapters (Veepeak, OBDLink CX, OBDLink MX+, and other ELM327-compatible adapters).</li>
   <li><strong>Location (while using the app)</strong> &mdash; only used by the optional Performance tab to measure 0&ndash;60, &frac14; mile and similar acceleration runs using GPS speed. Location data is read live during a run, displayed on screen, and discarded. It is never stored beyond the active run and never transmitted off your device.</li>
 </ul>
+
+<h2>Your vehicle&rsquo;s VIN</h2>
+<p>When an OBD-II adapter is connected, CanDash reads your vehicle&rsquo;s VIN (Vehicle Identification Number) so it can apply the correct diagnostic profile for that vehicle. The VIN is stored locally on your device only and is never transmitted to us or to any third party. The VIN never leaves your phone.</p>
 
 <h2>What is stored on your device</h2>
 <p>CanDash stores the following locally, on your device only:</p>
 <ul>
   <li>App preferences (gauge layout, refresh rate, units, night-mode setting, calibration offsets).</li>
   <li>Your saved custom OBD PIDs.</li>
-  <li>Your data-logging trip recordings (CSV files in the app&rsquo;s Documents directory).</li>
+  <li>Your data-logging trip recordings.</li>
   <li>The identifier of the last OBD adapter you connected to, so the app can reconnect automatically.</li>
+  <li>The VIN(s) of vehicles you have connected to, used to apply the correct diagnostic profile.</li>
   <li>Your in-app purchase status, restored from Apple when you launch the app.</li>
 </ul>
 <p>You can delete this data at any time by deleting the app, or by clearing individual items from inside the app where the option is provided (for example, deleting saved trips in the Data Logging tab).</p>
+
+<h2>Outbound network requests</h2>
+<p>CanDash makes outbound network requests to two URLs that we control, for the purpose of fetching read-only public content:</p>
+<ul>
+  <li><code>cardb.swiftcartech.com</code> &mdash; vehicle diagnostic database (public JSON files describing vehicle modules, PIDs, and addressing schemes).</li>
+  <li><code>garage.swiftcartech.com</code> &mdash; how-to article content (public Markdown files for the in-app Garage feature).</li>
+</ul>
+<p>These requests are standard public HTTP GETs for static files, equivalent to loading a public web page. They do not include any user data, identifiers, vehicle data, VIN, or location. We do not log, profile, or track these requests beyond standard server hosting metrics (aggregate request counts and IP addresses retained by our hosting provider for short periods to detect abuse). No such data is linked back to any user or device.</p>
 
 <h2>What is NOT collected</h2>
 <p>We want to be explicit about what CanDash does <strong>not</strong> do:</p>
@@ -50,21 +63,28 @@
   <li>We do not include any third-party analytics SDKs.</li>
   <li>We do not include advertising.</li>
   <li>We do not track your usage of the app.</li>
-  <li>We do not send any vehicle data, location data, or diagnostic data to our servers or any third party. We do not have servers.</li>
+  <li>We do not send your vehicle data, location data, diagnostic data, or VIN to our servers or any third party.</li>
+  <li>We do not use cookies or web local storage. The app is a native iOS application.</li>
 </ul>
 
 <h2>In-app purchases</h2>
-<p>CanDash offers optional one-time in-app purchases (CanDash Pro and vehicle-specific PID packs). All purchase processing is handled by Apple&rsquo;s StoreKit. We never see your payment details. Apple&rsquo;s privacy policy applies to the purchase transaction itself: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</p>
+<p>CanDash offers an optional one-time in-app purchase (CanDash Pro). All purchase processing is handled by Apple&rsquo;s StoreKit. We never see your payment details. Apple&rsquo;s privacy policy applies to the purchase transaction itself: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</p>
 
 <h2>Children</h2>
 <p>CanDash is not directed at children. It is a tool for adult vehicle owners. We do not knowingly collect data from anyone, including children.</p>
 
 <h2>Third parties</h2>
-<p>CanDash does not share data with third parties because it does not collect any data to share. The app communicates with two external systems only:</p>
+<p>CanDash does not share data with third parties because it does not collect any data to share. The app communicates with the following external systems only:</p>
 <ul>
   <li><strong>Your OBD-II adapter</strong>, over Bluetooth or the iAP2 accessory protocol. Data flows from the vehicle to the app on your phone.</li>
+  <li><strong>The two SwiftCarTech URLs</strong> listed above under &ldquo;Outbound network requests&rdquo;, for read-only public content.</li>
   <li><strong>Apple&rsquo;s App Store</strong>, for in-app purchases and purchase restoration.</li>
 </ul>
+
+<h2>Your rights under UK and EU data protection law</h2>
+<p>Because CanDash does not collect any personal data, no lawful basis under UK GDPR or EU GDPR is required for processing. This section is provided in the interests of transparency.</p>
+<p>The data controller for this app is SwiftCarTech, registered in the United Kingdom. You can contact us using the email address in the &ldquo;Contact&rdquo; section below.</p>
+<p>If you believe your personal data has been handled improperly &mdash; even though we do not collect any &mdash; you have the right to lodge a complaint with the UK Information Commissioner&rsquo;s Office (ICO) at <a href="https://ico.org.uk/">https://ico.org.uk/</a>, or with the equivalent supervisory authority in your country of residence.</p>
 
 <h2>Changes to this policy</h2>
 <p>If this policy ever changes, we will update the &ldquo;Last updated&rdquo; date at the top of this page. Material changes will be reflected in the next app update&rsquo;s release notes.</p>
